@@ -2,9 +2,6 @@
 
 Professional Photography Portfolio & Business Website - Capturing Life's Most Precious Moments
 
-## 🌐 Website
-[www.tprphotography.com](#) *(Coming Soon)*
-
 ## 📸 About
 TPR Photography is a professional photography service specializing in:
 - Wedding Photography & Cinematography
