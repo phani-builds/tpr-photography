@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact - TPR Photography | Professional Photography & Cinematography">
+    <title>Contact | TPR Photography</title>
+
+    
+    <link rel="icon" type="image/png" href="Images/tpr-logo.png">
+    <link rel="apple-touch-icon" href="Images/tpr-logo.png">
+    <meta name="theme-color" content="#d4af37">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+
+<div class="menu-overlay" id="menuOverlay"></div>
+
+
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <img src="Images/tpr-logo.png" alt="TPR Photography">
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+            <button class="menu-close" id="menuClose" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link nav-cta active">Book Now</a></li>
+            </ul>
+
+            <div class="menu-footer">
+                <div class="menu-contact">
+                    <p><i class="fas fa-phone"></i> +91 94946 27744</p>
+                    <p><i class="fas fa-envelope"></i> tprphotography9@gmail.com</p>
+                </div>
+                <div class="menu-social">
+                    <a href="https://wa.me/919494627744" target="_blank" aria-label="WhatsApp"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="tel:9494627744" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                    <a href="mailto:tprphotography9@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<header class="contact-header">
+    <div class="contact-header-bg"></div>
+    <div class="contact-header-overlay"></div>
+    <div class="container">
+        <div class="contact-header-content">
+            <h1 class="fade-in-up">Get In Touch</h1>
+            <p class="contact-subtitle fade-in-up delay-1">Let's create something beautiful together</p>
+        </div>
+    </div>
+</header>
+
+
+<section class="section contact-section">
+    <div class="container">
+        <div class="contact-wrapper">
+
+            
+            <div class="contact-form-col fade-in-up">
+                <form class="glass-form" id="contactForm" novalidate>
+                    <h3 class="form-title">Send a Message</h3>
+                    <p class="form-subtitle">We'll respond via WhatsApp within 24 hours</p>
+
+                    <div class="input-group">
+                        <input type="text" class="form-input" id="name" name="name" placeholder=" " required>
+                        <label for="name" class="form-label">Your Name *</label>
+                        <span class="form-error"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="tel" class="form-input" id="phone" name="phone" placeholder=" " required>
+                        <label for="phone" class="form-label">Phone Number *</label>
+                        <span class="form-error"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" class="form-input" id="email" name="email" placeholder=" ">
+                        <label for="email" class="form-label">Email Address</label>
+                        <span class="form-error"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" class="form-input" id="date" name="date" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder=" ">
+                        <label for="date" class="form-label">Event Date (Tentative)</label>
+                    </div>
+
+                    <div class="input-group">
+                        <select class="form-input" id="service" name="service" required>
+                            <option value="" disabled selected></option>
+                            <option value="Wedding Photography">Wedding Photography</option>
+                            <option value="Candid Photography">Candid Photography</option>
+                            <option value="Cinematic Film">Cinematic Film</option>
+                            <option value="Portrait Session">Portrait Session</option>
+                            <option value="Half Saree Function">Half Saree Function</option>
+                            <option value="Birthday / Event">Birthday / Event</option>
+                            <option value="Corporate Event">Corporate Event</option>
+                        </select>
+                        <label for="service" class="form-label">Select Service *</label>
+                        <span class="form-error"></span>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea class="form-input" id="message" name="message" rows="4" placeholder=" " required></textarea>
+                        <label for="message" class="form-label">Tell us about your event *</label>
+                        <span class="form-error"></span>
+                    </div>
+
+                    <button type="submit" class="form-submit-btn">
+                <span class="btn-text">
+                    <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                </span>
+                        <span class="btn-loader" style="display: none;">
+                    <i class="fas fa-circle-notch fa-spin"></i> Validating...
+                </span>
+                    </button>
+                </form>
+            </div>
+
+            
+            <div class="contact-info-col fade-in-up delay-1">
+                <div class="info-box">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Studio</h3>
+                    <p>TPR Photography Studio,<br>
+                        Kanuru, Vijayawada,<br>
+                        Andhra Pradesh, 520010</p>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Direct Contact</h3>
+                    <p><strong>Phone:</strong> <a href="tel:+919494627744">+91 94946 27744</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:tprphotography9@gmail.com">tprphotography9@gmail.com</a></p>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Working Hours</h3>
+                    <p><strong>Mon - Sat:</strong> 10:00 AM - 8:00 PM<br>
+                        <strong>Sunday:</strong> By Appointment</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="map-section fade-in-up">
+    <div class="map-container">
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1105.6704976715484!2d80.67053044471923!3d16.51444747830608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35e5e00f5f28e3%3A0x6e8983c911507203!2sTPR%20Photography%20%7C%20Kids%20%7C%20Candid%20%7C%20Wedding%20Photographers%20Vijayawada!5e0!3m2!1sen!2sin!4v1768066679805!5m2!1sen!2sin"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="TPR Photography Location">
+        </iframe>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col footer-brand">
+                <h3>TPR Photography</h3>
+                <p>Your trusted partner for capturing life's most beautiful moments. We provide comprehensive
+                    photography, videography, and cinematic editing services.</p>
+                <div class="iso-certification">
+                    <p><i class="fas fa-award"></i> 9001:2015 ISO CERTIFIED COMPANY</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://wa.me/919494627744" target="_blank" aria-label="WhatsApp"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="tel:9494627744" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                    <a href="https://www.instagram.com/tprphotography9/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html">Our Works</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html">Wedding Photography</a></li>
+                    <li><a href="services.html">Candid Shoots</a></li>
+                    <li><a href="services.html">Cinematic Films</a></li>
+                    <li><a href="services.html">Event Coverage</a></li>
+                    <li><a href="services.html">Birthdays</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="contact-list">
+                    <li><i class="fas fa-map-marker-alt"></i> <span>Vijayawada, Andhra Pradesh</span></li>
+                    <li><i class="fas fa-phone"></i> <span>+91 94946 27744</span></li>
+                    <li><i class="fas fa-envelope"></i> <span>tprphotography9@gmail.com</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="copyright-year">2026</span> TPR Photography. All Rights Reserved.</p>
+            <p>Designed with <i class="fas fa-heart footer-heart"></i> by <a href="https://phani-link-tree.netlify.app/"
+                                                                             target="_blank">Phani Chaitanya</a></p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/contact.js"></script>
+<script>
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

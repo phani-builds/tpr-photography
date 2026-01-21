@@ -1,0 +1,24 @@
+# TPR Photography - humans.txt
+# We are people, not machines!
+
+/* TEAM */
+Developer: Phani Chaitanya
+Website: https://phani-link-tree.netlify.app/
+Location: India
+
+Photographer: TPR Photography
+Contact: tprphotography9@gmail.com
+Phone: +91 94946 27744
+Location: India
+
+/* THANKS */
+Google Fonts - Playfair Display, Inter
+Font Awesome - Icons
+jsDelivr CDN - Image hosting
+
+/* SITE */
+Last update: 2026/01/21
+Language: English
+Standards: HTML5, CSS3, JavaScript
+Components: Photography Portfolio, Gallery, Contact Form
+Software: WebStorm, Git

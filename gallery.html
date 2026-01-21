@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gallery - TPR Photography Portfolio">
+    <title>Gallery | TPR Photography</title>
+
+    
+    <link rel="icon" type="image/png" href="Images/tpr-logo.png">
+    <link rel="apple-touch-icon" href="Images/tpr-logo.png">
+    <meta name="theme-color" content="#d4af37">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+
+<div class="menu-overlay" id="menuOverlay"></div>
+
+
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <img src="Images/tpr-logo.png" alt="TPR Photography">
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+            <button class="menu-close" id="menuClose" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link nav-cta">Book Now</a></li>
+            </ul>
+
+            <div class="menu-footer">
+                <div class="menu-contact">
+                    <p><i class="fas fa-phone"></i> +91 94946 27744</p>
+                    <p><i class="fas fa-envelope"></i> tprphotography9@gmail.com</p>
+                </div>
+                <div class="menu-social">
+                    <a href="https://wa.me/919494627744" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="tel:9494627744" aria-label="Phone">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="mailto:tprphotography9@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<header class="gallery-header">
+    <div class="container">
+        <h1 class="gallery-title fade-in-up">Visual Anthology</h1>
+        <p class="gallery-subtitle fade-in-up delay-1">Curated moments from our finest collections</p>
+    </div>
+</header>
+
+
+<section class="section gallery-section">
+    <div class="container">
+
+        
+        <div class="filter-container fade-in-up delay-2">
+            
+            <button class="filter-trigger" id="filterTrigger" aria-label="Open filter menu">
+                <span>
+                    <i class="fas fa-filter"></i>
+                    <span>All Photos</span>
+                </span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+
+            
+            <div class="filter-bar-desktop">
+                <button class="filter-btn active" data-filter="all" aria-label="Show all photos">
+                    <span>All</span>
+                </button>
+                <button class="filter-btn" data-filter="weddings" aria-label="Show wedding photos">
+                    <span>Weddings</span>
+                </button>
+                <button class="filter-btn" data-filter="preweddings" aria-label="Show pre-wedding photos">
+                    <span>Pre Weddings</span>
+                </button>
+                <button class="filter-btn" data-filter="birthdays" aria-label="Show birthday photos">
+                    <span>Birthdays</span>
+                </button>
+                <button class="filter-btn" data-filter="halfsarees" aria-label="Show half saree photos">
+                    <span>Half Sarees</span>
+                </button>
+                <button class="filter-btn" data-filter="dhoti" aria-label="Show dhoti photos">
+                    <span>Dhoti</span>
+                </button>
+                <button class="filter-btn" data-filter="realestate" aria-label="Show real estate photos">
+                    <span>Real Estate</span>
+                </button>
+            </div>
+        </div>
+
+        
+        <div class="bottom-sheet" id="bottomSheet" aria-hidden="true">
+            <div class="bottom-sheet-overlay" id="bottomSheetOverlay"></div>
+            <div class="bottom-sheet-content">
+                <div class="bottom-sheet-header">
+                    <h3>Filter Gallery</h3>
+                    <button class="bottom-sheet-close" id="bottomSheetClose" aria-label="Close filter menu">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="bottom-sheet-filters">
+                    <button class="filter-option active" data-filter="all">
+                        <span>All Photos</span>
+                        <i class="fas fa-check"></i>
+                    </button>
+                    <button class="filter-option" data-filter="weddings">
+                        <span>Weddings</span>
+                        <i class="fas fa-check"></i>
+                    </button>
+                    <button class="filter-option" data-filter="preweddings">
+                        <span>Pre Weddings</span>
+                        <i class="fas fa-check"></i>
+                    </button>
+                    <button class="filter-option" data-filter="birthdays">
+                        <span>Birthdays</span>
+                        <i class="fas fa-check"></i>
+                    </button>
+                    <button class="filter-option" data-filter="halfsarees">
+                        <span>Half Sarees</span>
+                        <i class="fas fa-check"></i>
+                    </button>
+                    <button class="filter-option" data-filter="dhoti">
+                        <span>Dhoti</span>
+                        <i class="fas fa-check"></i>
+                    </button>
+                    <button class="filter-option" data-filter="realestate">
+                        <span>Real Estate</span>
+                        <i class="fas fa-check"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="gallery-masonry" id="galleryMasonry">
+            
+        </div>
+
+        
+        <div class="load-more-wrapper">
+            <button id="loadMoreBtn" class="load-more-btn" aria-label="Load more photos">
+                Load More
+            </button>
+        </div>
+
+    </div>
+</section>
+
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+        <i class="fas fa-times"></i>
+    </button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+    <img src="" alt="Full View" class="lightbox-content" id="lightboxImg">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col footer-brand">
+                <h3>TPR Photography</h3>
+                <p>Your trusted partner for capturing life's most beautiful moments. We provide comprehensive
+                    photography, videography, and cinematic editing services.</p>
+                <div class="iso-certification">
+                    <p><i class="fas fa-award"></i> 9001:2015 ISO CERTIFIED COMPANY</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://wa.me/919494627744" target="_blank" aria-label="WhatsApp"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="tel:9494627744" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                    <a href="https://www.instagram.com/tprphotography9/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html">Our Works</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html">Wedding Photography</a></li>
+                    <li><a href="services.html">Candid Shoots</a></li>
+                    <li><a href="services.html">Cinematic Films</a></li>
+                    <li><a href="services.html">Event Coverage</a></li>
+                    <li><a href="services.html">Birthdays</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="contact-list">
+                    <li><i class="fas fa-map-marker-alt"></i> <span>Vijayawada, Andhra Pradesh</span></li>
+                    <li><i class="fas fa-phone"></i> <span>+91 94946 27744</span></li>
+                    <li><i class="fas fa-envelope"></i> <span>tprphotography9@gmail.com</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="copyright-year">2026</span> TPR Photography. All Rights Reserved.</p>
+            <p>Designed with <i class="fas fa-heart footer-heart"></i> by <a href="https://phani-link-tree.netlify.app/"
+                                                                             target="_blank">Phani Chaitanya</a></p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/gallery.js"></script>
+<script>
+    // Set current year in footer
+    document.getElementById('copyright-year').textContent = new Date().getFullYear().toString();
+</script>
+
+</body>
+</html>

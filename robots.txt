@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.tprphotography.com/sitemap.xml
+
+# Allow all pages for photography portfolio
+Allow: /index.html
+Allow: /gallery.html
+Allow: /services.html
+Allow: /about.html
+Allow: /contact.html
+
+# Allow image directories for Google Images indexing
+Allow: /Images/
+Allow: /Icons/
+
+# Disallow IDE folders if accidentally committed
+Disallow: /.idea/
+Disallow: /.vscode/

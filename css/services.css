@@ -1,0 +1,802 @@
+/* =========================================
+   SERVICES PAGE - PREMIUM STYLES
+   Mobile-First Approach
+   ========================================= */
+
+/* =========================================
+   1. SERVICES HEADER
+   ========================================= */
+
+.services-header {
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 140px 0 80px;
+    overflow: hidden;
+}
+
+.services-header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=2000&auto=format&fit=crop') center/cover;
+    background-attachment: fixed;
+    z-index: 0;
+}
+
+.services-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(15, 15, 15, 0.75) 100%);
+    z-index: 1;
+}
+
+.services-header-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.services-header h1 {
+    font-size: 2.8rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #fff 0%, var(--primary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+}
+
+.services-subtitle {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* =========================================
+   2. SERVICES GRID SECTION (MOBILE-FIRST)
+   ========================================= */
+
+.services-section {
+    padding: 60px 0;
+    background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.service-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.05), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-card-inner {
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.service-icon-wrapper {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.service-icon-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.service-card:hover .service-icon-wrapper {
+    transform: scale(1.08) rotate(3deg);
+    border-color: rgba(212, 175, 55, 0.5);
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.2);
+}
+
+.service-card:hover .service-icon-wrapper::after {
+    opacity: 1;
+}
+
+.service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+.service-card:hover .service-image {
+    transform: scale(1.1);
+}
+
+.service-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--text-light);
+    line-height: 1.3;
+}
+
+.service-card p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.service-features {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.service-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.service-features i {
+    color: var(--primary-color);
+    font-size: 0.85rem;
+}
+
+.service-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.service-btn:hover {
+    background: var(--primary-color);
+    color: #000;
+    gap: 15px;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* =========================================
+   3. TIMELINE SECTION (MOBILE-FIRST)
+   ========================================= */
+
+.timeline-section {
+    padding: 70px 0;
+    background: var(--bg-card);
+    position: relative;
+}
+
+.timeline-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 50px;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--primary-color) 0%, rgba(212, 175, 55, 0.2) 100%);
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -41px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border: 4px solid var(--bg-card);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    z-index: 2;
+}
+
+.timeline-item::before {
+    content: attr(data-step);
+    position: absolute;
+    left: -55px;
+    top: -8px;
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(212, 175, 55, 0.1);
+    z-index: 0;
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(212, 175, 55, 0.3);
+    transform: translateX(5px);
+}
+
+.timeline-content h4 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =========================================
+   4. PRICING SECTION (MOBILE-FIRST)
+   ========================================= */
+
+.pricing-section {
+    padding: 70px 0;
+    background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.pricing-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.pricing-card.featured {
+    background: linear-gradient(145deg, rgba(212, 175, 55, 0.08) 0%, rgba(212, 175, 55, 0.02) 100%);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: #000;
+    padding: 6px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.pricing-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.pricing-amount {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 3px;
+}
+
+.currency {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    line-height: 1;
+}
+
+.price {
+    font-size: 3.5rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--text-light);
+    line-height: 1;
+}
+
+.period {
+    font-size: 1rem;
+    color: var(--text-gray);
+    font-weight: 400;
+}
+
+.pricing-features {
+    list-style: none;
+    margin-bottom: 35px;
+    text-align: left;
+}
+
+.pricing-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.pricing-features i {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.pricing-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.pricing-btn:hover {
+    background: var(--primary-color);
+    color: #000;
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+    transform: translateY(-2px);
+}
+
+.pricing-card.featured .pricing-btn {
+    background: var(--primary-color);
+    color: #000;
+}
+
+.pricing-card.featured .pricing-btn:hover {
+    background: transparent;
+    color: var(--primary-color);
+}
+
+/* =========================================
+   5. FAQ SECTION (MOBILE-FIRST)
+   ========================================= */
+
+.faq-section {
+    padding: 70px 0;
+    background: var(--bg-card);
+}
+
+.faq-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 5px;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 22px 0;
+    background: transparent;
+    border: none;
+    color: var(--text-light);
+    text-align: left;
+    font-size: 1.05rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: var(--primary-color);
+}
+
+.faq-question i {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq-question.active i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-answer p {
+    padding: 0 0 25px 0;
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* =========================================
+   6. TABLET RESPONSIVE (768px+)
+   ========================================= */
+
+@media (min-width: 768px) {
+    .services-header {
+        min-height: 60vh;
+        padding: 160px 0 100px;
+    }
+
+    .services-header h1 {
+        font-size: 4rem;
+    }
+
+    .services-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .services-section {
+        padding: 80px 0;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .service-icon-wrapper {
+        width: 110px;
+        height: 110px;
+    }
+
+    .timeline-wrapper {
+        padding-left: 80px;
+    }
+
+    .timeline-line {
+        left: 30px;
+    }
+
+    .timeline-marker {
+        left: -61px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .timeline-item::before {
+        left: -80px;
+        font-size: 4rem;
+    }
+
+    .pricing-section {
+        padding: 80px 0;
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .faq-section {
+        padding: 80px 0;
+    }
+}
+
+/* =========================================
+   7. DESKTOP RESPONSIVE (1024px+)
+   ========================================= */
+
+@media (min-width: 1024px) {
+    .services-header h1 {
+        font-size: 5rem;
+    }
+
+    .services-section {
+        padding: 100px 0;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+    }
+
+    .service-icon-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+
+    .timeline-section {
+        padding: 100px 0;
+    }
+
+    .timeline-wrapper {
+        padding-left: 0;
+        padding: 0 50px;
+    }
+
+    .timeline-line {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item {
+        display: flex;
+        justify-content: flex-start;
+        padding-bottom: 60px;
+    }
+
+    .timeline-item:nth-child(even) {
+        justify-content: flex-end;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        text-align: right;
+    }
+
+    .timeline-marker {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item::before {
+        left: auto;
+        right: auto;
+    }
+
+    .timeline-item:nth-child(odd)::before {
+        right: -80px;
+    }
+
+    .timeline-item:nth-child(even)::before {
+        left: -80px;
+    }
+
+    .timeline-content {
+        width: 45%;
+    }
+
+    .pricing-section {
+        padding: 100px 0;
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: stretch;
+    }
+
+    .pricing-card.featured {
+        grid-column: auto;
+        max-width: none;
+    }
+
+    .pricing-card.featured:hover {
+        transform: translateY(-10px);
+    }
+
+    .faq-section {
+        padding: 100px 0;
+    }
+}
+
+/* =========================================
+   8. LARGE DESKTOP (1440px+)
+   ========================================= */
+
+@media (min-width: 1440px) {
+    .services-header h1 {
+        font-size: 6rem;
+    }
+
+    .services-grid {
+        gap: 40px;
+    }
+
+    .service-card-inner {
+        padding: 40px 30px;
+    }
+
+    .service-icon-wrapper {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+/* =========================================
+   9. MOBILE SPECIFIC ADJUSTMENTS
+   ========================================= */
+
+@media (max-width: 767px) {
+    .services-header {
+        min-height: 45vh;
+        padding: 120px 0 60px;
+    }
+
+    .services-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .services-subtitle {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+
+    .services-section {
+        padding: 50px 0;
+    }
+
+    .service-card-inner {
+        padding: 30px 20px;
+    }
+
+    .service-icon-wrapper {
+        width: 90px;
+        height: 90px;
+    }
+
+    .timeline-section {
+        padding: 50px 0;
+    }
+
+    .timeline-wrapper {
+        padding-left: 40px;
+    }
+
+    .timeline-line {
+        left: 15px;
+    }
+
+    .timeline-marker {
+        left: -32px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .timeline-item::before {
+        left: -50px;
+        font-size: 2.5rem;
+    }
+
+    .pricing-section {
+        padding: 50px 0;
+    }
+
+    .pricing-card {
+        padding: 35px 25px;
+    }
+
+    .faq-section {
+        padding: 50px 0;
+    }
+
+    .faq-question {
+        font-size: 0.95rem;
+        padding: 18px 0;
+    }
+}
+
+/* =========================================
+   10. ACCESSIBILITY & PERFORMANCE
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .service-card,
+    .timeline-content,
+    .pricing-card,
+    .faq-question i,
+    .service-icon-wrapper,
+    .service-image {
+        transition: none;
+        animation: none;
+    }
+}
+
+
+.service-btn:focus-visible,
+.pricing-btn:focus-visible,
+.faq-question:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+}
