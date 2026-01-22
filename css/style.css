@@ -233,7 +233,7 @@ img {
     background: var(--bg-dark);
     transform: translateY(-2px);
     border: 1px solid var(--primary-color);
-    padding-left: 30px !important;
+    padding-left: 28px !important;
 }
 
 .nav-cta.active,
