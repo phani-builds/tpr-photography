@@ -2,9 +2,6 @@
 
 Professional Photography Portfolio & Business Website - Capturing Life's Most Precious Moments
 
-## 🌐 Website
-[www.tprphotography.com](#) *(Coming Soon)*
-
 ## 📸 About
 TPR Photography is a professional photography service specializing in:
 - Wedding Photography & Cinematography
@@ -52,13 +49,6 @@ TPR Photography is a professional photography service specializing in:
 │   ├── services.js        # Services animations
 │   ├── about.js           # About page animations
 │   └── contact.js         # Form validation & submission
-├── Icons/                  # SVG service icons
-│   ├── wedding.svg
-│   ├── birthday.svg
-│   ├── corporate.svg
-│   ├── portrait.svg
-│   ├── cinematography.svg
-│   └── girl.svg
 └── Images/                 # Local assets
     ├── tpr-logo.png       # Logo
     ├── tpr-img.jpeg       # About image
