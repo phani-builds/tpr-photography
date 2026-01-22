@@ -68,7 +68,7 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px;
+    height: 100px;
     background: var(--glass-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -94,11 +94,10 @@ img {
 }
 
 .logo img {
-    height: 160px;
+    height: 180px;
     width: auto;
     object-fit: contain;
 }
-
 
 .nav-toggle {
     display: flex;
@@ -231,8 +230,9 @@ img {
 }
 
 .nav-cta:hover {
-    background: var(--primary-hover);
+    background: var(--bg-dark);
     transform: translateY(-2px);
+    border: 1px solid var(--primary-color);
     padding-left: 30px !important;
 }
 
@@ -380,28 +380,6 @@ section.hero {
     gap: 15px;
     flex-wrap: wrap;
 }
-
-
-.hero-brand-logo {
-    position: absolute;
-    bottom: 280px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-    opacity: 0.9;
-    transition: opacity 0.3s ease;
-}
-
-.hero-brand-logo img {
-    height: 100px;
-    width: auto;
-    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
-}
-
-.hero-brand-logo:hover {
-    opacity: 1;
-}
-
 
 .btn {
     display: inline-block;
@@ -727,7 +705,6 @@ section.hero {
     min-width: 16px;
 }
 
-
 .iso-certification {
     margin: 15px 0 20px 0;
     padding: 12px 0;
@@ -851,6 +828,10 @@ section.hero {
    ========================================= */
 
 @media (min-width: 768px) {
+    .logo img {
+        height: 200px;
+    }
+
     .container {
         padding: 0 40px;
     }
@@ -863,15 +844,6 @@ section.hero {
     .hero p {
         font-size: 1.1rem;
         max-width: 500px;
-    }
-
-    
-    .hero-brand-logo {
-        bottom: 40px;
-    }
-
-    .hero-brand-logo img {
-        height: 200px;
     }
 
     .section {
@@ -1013,16 +985,6 @@ section.hero {
     .hero-content {
         padding-bottom: 60px;
     }
-
-    
-    .hero-brand-logo {
-        bottom: 50px;
-    }
-
-    .hero-brand-logo img {
-        height: 160px;
-    }
-
     
     .section {
         padding: 100px 0;
@@ -1088,11 +1050,6 @@ section.hero {
     .section-title {
         font-size: 3.5rem;
     }
-
-    
-    .hero-brand-logo img {
-        height: 180px;
-    }
 }
 
 /* =========================================
@@ -1125,15 +1082,6 @@ section.hero {
 
     .hero-btns {
         margin-top: 15px;
-    }
-
-    
-    .hero-brand-logo {
-        bottom: 280px;
-    }
-
-    .hero-brand-logo img {
-        height: 200px;
     }
 
     .section-header {
