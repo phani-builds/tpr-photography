@@ -25,3 +25,9 @@ build/
 
 # Dependencies (if any)
 node_modules/
+
+404.html
+humans.txt
+robots.txt
+netlify.toml
+sitemap.xml
